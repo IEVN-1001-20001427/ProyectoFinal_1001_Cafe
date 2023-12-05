@@ -1,0 +1,112 @@
+<!--Inicio-->
+<div class="principal">
+  <img
+    class="w-100 filtro"
+    src="/assets/imgs/carousel-2.jpg"
+    alt="First slide"
+  />
+  <div class="Texto">
+    <h1 class="display-1 text-warning"><b>MENÚ</b></h1>
+  </div>
+</div>
+
+<div
+  class="container-fluid row mx-0 px-auto mt-4 pt-5 pb-3 bg-light text-black"
+>
+  <div class="col-md-2 shadow-lg p-3 news-cards" id="wish">
+    <h5>Lista de Deseos:</h5>
+    <ul class="list-unstyled">
+      <li *ngFor="let w of listDeseo" class="news-cards">{{w}}
+        <button type="button" class="btn btn-warning mx-auto" (click)='dejarDesear(w)'>
+          x
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div
+    id="section"
+    class="col-md-7 d-flex m-auto flex-wrap"
+    style="max-height: 70vh; overflow-y: scroll"
+  >
+    <div
+      *ngFor="let i of listProducts"
+      class="card text-center col-md-5 mx-auto my-3 shadow-lg p-1 news-cards"      
+    >
+      <div class="bg-image" style="width: 100%; height: 200px;">
+        <img src="{{ i.imagen }}" class="img-fluid" />
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">{{ i.nombre }}</h5>
+        <p class="card-text">Descripcion: {{ i.descripcion }}</p>
+        <p class="card-text">Marca: {{ i.marca }}</p>
+        <h5 class="card-title">$ {{ i.precio_siva }} MXN.</h5>
+        <div class="container-fluid d-flex">
+          <button type="button" class="btn btn-success mx-auto" (click)="agregarcarro(i.nombre,1,i.precio_siva)">
+            Comprar
+          </button>
+          <button type="button" class="btn btn-warning mx-auto" (click)='desear(i.nombre)'>
+            Deseo
+          </button>
+        </div>        
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 shadow-lg p-1 news-cards" id="cart">
+    <h5>Carrito de compras:</h5>
+    <div class="row mx-0 px-0 mt-5">
+      <ul class="list-unstyled container-fluid">
+        <li class="row container-fluid news-cards" *ngFor="let a of listCompra">
+          <div class="col-md-4 text-right">
+            <p>{{ a.nombre}}</p>
+          </div>
+          <div class="col-md-1 text-left">
+            <p>{{ a.cantidad }}</p>
+          </div>
+          <div class="col-md-4 text-left">
+            <p>$ {{ a.precio }}</p>
+          </div>
+          <div class="col-md-2 text-left">
+            <button type="button" class="btn btn-warning" (click)='quitarcarro(a.nombre)'>
+              x
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="row mx-0 px-0 mt-5 news-cards">
+      <div class="col-md-8 text-right">
+        <p>Subtotal: {{ffct.precio}}</p>
+        <p>IVA: {{ffct.iva}}</p>
+        <p>Total: {{ffct.total}}</p>
+      </div>
+      <div class="col-md-4 text-left">
+        <p>stl</p>
+        <p>iva</p>
+        <p>ttl</p>
+      </div>
+    </div>
+    <button type="button" class="btn btn-warning w-100">
+      <i class="fas fa-money-bill"> Pagar</i>
+    </button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer
+  class="bg-dark text-white text-center py-4 filtro cuadro"
+  style="background-image: url('/assets/imgs/bg.jpg'); background-size: cover"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <p>&copy; 2023 El Ajolote | Todos los derechos reservados</p>
+        <p>Dirección: Plaza Mayor, León Guanajuato, Mx</p>
+        <p>Teléfono: +52 477 1283145</p>
+        <p>Email: Cafe@elajolote.com</p>
+      </div>
+    </div>
+  </div>
+</footer>

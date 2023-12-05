@@ -1,0 +1,170 @@
+<div class="container-fluid">
+  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="pills-home-tab"
+        data-bs-toggle="pill"
+        data-bs-target="#pills-home"
+        type="button"
+        role="tab"
+        aria-controls="pills-home"
+        aria-selected="true"
+      >
+        Productos
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link disabled"
+        id="pills-profile-tab"
+        data-bs-toggle="pill"
+        data-bs-target="#pills-profile"
+        type="button"
+        role="tab"
+        aria-controls="pills-profile"
+        aria-selected="false"
+      >
+        Facturas
+      </button>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="pills-home"
+      role="tabpanel"
+      aria-labelledby="pills-home-tab"
+    >
+      <div class="row">
+        
+        <div class="col-9" style="max-height: 70vh; overflow-y: scroll; overflow-x: scroll;">
+          <h2>Inventario de productos</h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="table-responsive">
+                  <table
+                    id="tablaPersonas"
+                    class="table table-striped table-bordered table-condensed"
+                    style="width: 100%"
+                  >
+                    <thead class="text-center">
+                      <tr>
+                        <th>Id</th>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Marca</th>
+                        <th>Proveedor</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- Aquí se cargarán los registros dinámicamente -->
+                      <tr *ngFor="let w of listProducts">
+                        <th>
+                          <div v-for="">{{ w.id_producto }}</div>
+                        </th>
+                        <th>
+                          <div v-for="">{{ w.nombre }}</div>
+                        </th>
+                        <th>
+                          <div v-for="">{{ w.precio_siva }}</div>
+                        </th>
+                        <th>
+                          <div v-for="">{{ w.descripcion }}</div>
+                        </th>
+                        <th>
+                          <div v-for="">{{ w.inventario }}</div>
+                        </th>
+                        <th>
+                          <div v-for="">{{ w.imagen }}</div>
+                        </th>
+                        <th>
+                          <div v-for="">{{ w.marca }}</div>
+                        </th>
+                        <th>
+                          <div v-for="">{{ w.provedor }}</div>
+                        </th>
+                        <th>
+                          <button type="button" (click)="delProduct(w.id_producto)" class="btn btn-danger w-100">
+                            Eliminar
+                          </button>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+            <app-n-producto></app-n-producto>
+        </div>
+
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="pills-profile"
+      role="tabpanel"
+      aria-labelledby="pills-profile-tab"
+      style="max-height: 70vh; overflow-y: scroll"
+    >
+      <h2>Historial de facturas</h2>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="table-responsive">
+              <table
+                id="tablaPersonas"
+                class="table table-striped table-bordered table-condensed"
+                style="width: 100%"
+              >
+                <thead class="text-center">
+                  <tr>
+                    <th>Id</th>
+                    <th>Usuario</th>
+                    <th>Precio</th>
+                    <th>iva</th>
+                    <th>Detalles</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Aquí se cargarán los registros dinámicamente -->
+                  <tr *ngFor="let f of listTickets">
+                    <th>
+                      <div v-for="">{{ f.id_factura }}</div>
+                    </th>
+                    <th>
+                      <div v-for="">{{ f.id_user }}</div>
+                    </th>
+                    <th>
+                      <div v-for="">{{ f.precio }}</div>
+                    </th>
+                    <th>
+                      <div v-for="">{{ f.iva }}</div>
+                    </th>
+                    <th>
+                      <div v-for="">{{ f.detalle }}</div>
+                    </th>
+                    <th>
+                      <div v-for="">{{ f.total }}</div>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<form [formGroup]="productForm" (ngSubmit)="create()" style="max-height: 70vh; overflow-y: scroll">
+  <h3>Formulario de productos</h3>
+  <div class="mb-3">
+    <label class="form-label" for="id_producto">id_producto</label>
+    <input
+      class="form-control"
+      type="number"
+      placeholder="00"
+      name="id_producto"
+      id="id_producto"
+      formControlName="id_producto"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="nombre">Nombre</label>
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Nombre"
+      name="nombre"
+      id="nombre"
+      formControlName="nombre"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="precio_siva">precio_siva</label>
+    <input
+      class="form-control"
+      type="number"
+      placeholder="00.00"
+      name="precio_siva"
+      id="precio_siva"
+      formControlName="precio_siva"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="descripcion">Descripcion</label>
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Descripcion"
+      name="descripcion"
+      id="descripcion"
+      formControlName="descripcion"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="inventario">inventario</label>
+    <input
+      class="form-control"
+      type="number"
+      placeholder="00"
+      name="inventario"
+      id="inventario"
+      formControlName="inventario"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="imagen">Imagen</label>
+    <input
+      class="form-control"
+      type="text"
+      placeholder="http://imagen"
+      name="imagen"
+      id="imagen"
+      formControlName="imagen"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="marca">Marca</label>
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Marca"
+      name="marca"
+      id="marca"
+      formControlName="marca"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="provedor">Proveedor</label>
+    <input
+      class="form-control"
+      type="text"
+      placeholder="Proveedor"
+      name="provedor"
+      id="provedor"
+      formControlName="provedor"
+    />
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary w-100 mx-auto"
+
+  >
+    Guardar
+  </button>
+</form>

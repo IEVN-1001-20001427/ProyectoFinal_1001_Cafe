@@ -1,0 +1,102 @@
+/* Estilos personalizados para la imagen y el texto */
+div {
+    position: relative;
+    text-align: center;
+  }
+  
+  .filtro {
+    width: 100%;
+    filter: sepia(50%);
+  }
+
+  .principal{
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h2.text-white,
+  h2.abajo.text-white {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2; /* Ajusta el espaciado vertical según sea necesario */
+  }
+  
+  h1.display-1.text-warning {
+    margin: 0;
+    font-size: 150px;
+    font-weight: bold;
+    line-height: 1.2; /* Ajusta el espaciado vertical según sea necesario */
+  }
+
+/* Estilos personalizados para la sección de contacto */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f8f9fa; /* Color de fondo */
+  }
+  
+  .section-title {
+    color: #007bff; /* Color primario de Bootstrap */
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    background-color: #ffffff; /* Color de fondo del formulario */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical; /* Permite redimensionar verticalmente solo */
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+/* Estilos personalizados para el footer */
+footer {
+    padding: 40px 0;
+}
+
+.container {
+    position: relative;
+}
+
+
+/* Estilo para el texto del footer */
+p {
+    margin: 5px 0;
+}
+
+/* Estilos específicos para el fondo oscuro */
+.bg-dark {
+    background-color: #343a40; /* Cambia este color según tu preferencia */
+    color: #fff;
+}
+
+/* Añade sombra al footer para un efecto de elevación */
+footer {
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,100 @@
+<form [formGroup]="nclientForm" (ngSubmit)="create()" style="max-height: 50vh; overflow-y: scroll">
+    <h3>Crear una cuenta</h3>
+    <div class="mb-3">
+      <label class="form-label" for="id_user">id_user</label>
+      <input
+        class="form-control"
+        type="number"
+        placeholder="00"
+        name="id_user"
+        id="id_user"
+        formControlName="id_user"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="correo">correo</label>
+      <input
+        class="form-control"
+        type="email"
+        placeholder="correo"
+        name="correo"
+        id="correo"
+        formControlName="correo"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="contrasena">contrasena</label>
+      <input
+        class="form-control"
+        type="password"
+        placeholder="pass"
+        name="contrasena"
+        id="contrasena"
+        formControlName="contrasena"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="nombre">nombre</label>
+      <input
+        class="form-control"
+        type="text"
+        placeholder="nombre"
+        name="nombre"
+        id="nombre"
+        formControlName="nombre"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="ap_paterno">ap_paterno</label>
+      <input
+        class="form-control"
+        type="text"
+        placeholder="ap_paterno"
+        name="ap_paterno"
+        id="ap_paterno"
+        formControlName="ap_paterno"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="ap_materno">ap_materno</label>
+      <input
+        class="form-control"
+        type="text"
+        placeholder="ap_materno"
+        name="ap_materno"
+        id="ap_materno"
+        formControlName="ap_materno"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="telefono">telefono</label>
+      <input
+        class="form-control"
+        type="text"
+        placeholder="telefono"
+        name="telefono"
+        id="telefono"
+        formControlName="telefono"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="num_tarjeta">num_tarjeta</label>
+      <input
+        class="form-control"
+        type="text"
+        placeholder="num_tarjeta"
+        name="num_tarjeta"
+        id="num_tarjeta"
+        formControlName="num_tarjeta"
+      />
+    </div>
+  
+    <button
+      type="submit"
+      class="btn btn-warning w-100 mx-auto"
+  
+    >
+      Guardar
+    </button>
+  </form>
+  

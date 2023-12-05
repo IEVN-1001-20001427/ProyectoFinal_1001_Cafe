@@ -1,0 +1,54 @@
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <!-- Login Start -->
+        <div class="col-md-6">
+            <form [formGroup]="userForm" (ngSubmit)="iniciar()" class="bg-light p-4 rounded">
+                <h2 class="text-center mb-4">Iniciar sesión</h2>
+                <div class="mb-3">
+                    <label class="form-label" for="correo">correo</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="correo"
+                      name="correo"
+                      id="correo"
+                      formControlName="correo"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="contrasena">contrasena</label>
+                    <input
+                      class="form-control"
+                      type="password"
+                      placeholder="pass"
+                      name="contrasena"
+                      id="contrasena"
+                      formControlName="contrasena"
+                    />
+                  </div>
+                <button type="submit" class="btn btn-warning btn-block">Iniciar Sesión</button>
+            </form>
+            <div class="text-center">
+                <p>No tengo cuenta <a class="text-warning" href="">Registrate</a></p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <app-e-producto></app-e-producto>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4 filtro cuadro" style="background-image: url('/assets/imgs/bg.jpg'); background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p>&copy; 2023 El Ajolote | Todos los derechos reservados</p>
+                <p>Dirección: Plaza Mayor, León Guanajuato, Mx</p>
+                <p>Teléfono: +52 477 1283145</p>
+                <p>Email: Cafe@elajolote.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
